@@ -6,4 +6,13 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-product = Product.new(name: "", price: , image_url: "", description: "")
+10.times do
+  product = Product.new({
+    name: Faker::Tea.variety,
+    price: Faker::Number.number(digits: 2),
+    image_url: "",
+    description: Faker::Food.description
+  })
+
+  product.save
+end
