@@ -10,7 +10,7 @@
   product = Product.new({
     name: Faker::Tea.variety,
     price: Faker::Number.number(digits: 2),
-    image_url: "",
+    image_url: Faker::Internet.url,
     description: Faker::Food.description
   })
 

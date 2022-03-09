@@ -9,16 +9,17 @@ git commit ...
 (make remote repository on git hub)
 (git push origin main)
 
-route
-  config/route.rb
-  create two route: show, index
+model
+  rails g model
+  rails db:migrate
 
 controller
   rails g controller
   create two methods: show, index
-model
-  rails g model
-  rails db:migrate
+
+route
+  config/route.rb
+  create two route: show, index　
 
 put info
   seed.rb
@@ -30,6 +31,9 @@ test request
   access to api with url created -->
 
 
-rails g controller products
+<!-- commands -->
+controller => 複数形
+  rails g controller products
 
-rails g model Product name:string price:integer image_url:string description:text
+Model => 単数形
+  rails g model Product name:string price:integer image_url:string description:text
