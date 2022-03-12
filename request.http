@@ -1,4 +1,37 @@
-http://localhost:3000/products
+
+# get products (index)
+GET http://localhost:3000/products
+
 
 ###
-http://localhost:3000/products/1
+# get product (show)
+GET http://localhost:3000/products/1
+
+###
+# create product
+POST http://localhost:3000/products
+content-type: application/json
+
+{
+  "input_name": "Car",
+  "input_price": 100,
+  "input_image_url": "www.abc.com",
+  "input_description": "this is a cheap car!!"
+}
+
+###
+# update product
+PATCH http://localhost:3000/products/1
+Content-Type: application/json
+
+{
+  "input_name": "Airplane",
+  "input_price": 100,
+  "input_image_url": "www.abc.com",
+  "input_description": "this is a cheap airplane!!"
+}
+
+
+###
+# delete product
+DELETE http://localhost:3000/products/9
