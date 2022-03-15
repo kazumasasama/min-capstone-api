@@ -5,7 +5,7 @@ GET http://localhost:3000/products
 
 ###
 # get product (show)
-GET http://localhost:3000/products/1
+GET http://localhost:3000/products/4
 
 ###
 # create product
@@ -13,22 +13,22 @@ POST http://localhost:3000/products
 content-type: application/json
 
 {
-  "input_name": "Car",
-  "input_price": 100,
-  "input_image_url": "www.abc.com",
-  "input_description": "this is a cheap car!!"
+  "name": "Car",
+  "price": 100,
+  "image_url": "www.abc.com",
+  "description": "this is a cheap car!!"
 }
 
 ###
 # update product
-PATCH http://localhost:3000/products/1
+PATCH http://localhost:3000/products/4
 Content-Type: application/json
 
 {
-  "input_name": "Airplane",
-  "input_price": 100,
-  "input_image_url": "www.abc.com",
-  "input_description": "this is a cheap airplane!!"
+  "name": "Airplane",
+  "price": 9,
+  "image_url": "www.abc.com",
+  "description": "this is a cheap airplane!!"
 }
 
 
