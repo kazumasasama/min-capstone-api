@@ -1,11 +1,11 @@
 
 # get products (index)
-GET http://localhost:3000/products
+GET http://localhost:3000/products.json
 
 
 ###
 # get product (show)
-GET http://localhost:3000/products/4
+GET http://localhost:3000/products/16.json
 
 ###
 # create product

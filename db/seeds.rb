@@ -1,18 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
-10.times do
-  product = Product.new({
-    name: Faker::Tea.variety,
-    price: Faker::Number.number(digits: 2),
-    image_url: Faker::Internet.url,
-    description: Faker::Food.description
-  })
-
-  product.save
-end
+Product.create!([
+  {name: "Shincha", price: "95.25", image_url: nil, description: nil, quantity: nil},
+  {name: "Bai Jiguan", price: "28.49", image_url: nil, description: nil, quantity: nil},
+  {name: "Masala Chai", price: "86.62", image_url: nil, description: nil, quantity: nil},
+  {name: "Bai Mu Dan", price: "38.42", image_url: nil, description: nil, quantity: nil},
+  {name: "Shou Mei", price: "65.48", image_url: nil, description: nil, quantity: nil},
+  {name: "English Breakfast", price: "89.58", image_url: nil, description: nil, quantity: nil},
+  {name: "Gongmei", price: "95.95", image_url: nil, description: nil, quantity: nil},
+  {name: "Shui Xian", price: "92.81", image_url: nil, description: nil, quantity: nil},
+  {name: "Ujeon", price: "64.25", image_url: nil, description: nil, quantity: nil},
+  {name: "Hojicha", price: "41.0", image_url: "http://durgan-jacobi.io/venus_larkin", description: "Three egg whites with spinach, mushrooms, caramelized onions, tomatoes and low-fat feta cheese. With herbed quinoa, and your choice of rye or whole-grain toast.", quantity: 1},
+  {name: "Jiaogulan", price: "11.0", image_url: "http://morissette.name/boyd_kuphal", description: "Fresh parsley, Italian sausage, shallots, garlic, sun-dried tomatoes and mozzarella cheese in an all-butter crust. With a side of mixed fruits.", quantity: 2},
+  {name: "Gaoshan", price: "11.0", image_url: "http://rippin.name/merrilee.dach", description: "Three eggs with cilantro, tomatoes, onions, avocados and melted Emmental cheese. With a side of roasted potatoes, and your choice of toast or croissant.", quantity: 2},
+  {name: "Masala Chai", price: "71.0", image_url: "http://schultz-white.net/raleigh", description: "Three eggs with cilantro, tomatoes, onions, avocados and melted Emmental cheese. With a side of roasted potatoes, and your choice of toast or croissant.", quantity: 6},
+  {name: "Yi Zhen Bai Hao", price: "31.0", image_url: "http://ledner-flatley.net/madaline", description: "Two butter croissants of your choice (plain, almond or cheese). With a side of herb butter or house-made hazelnut spread.", quantity: 3},
+  {name: "Jaekseol", price: "78.0", image_url: "http://hettinger.info/lincoln", description: "28-day aged 300g USDA Certified Prime Ribeye, rosemary-thyme garlic butter, with choice of two sides.", quantity: 3},
+  {name: "Rize", price: "37.0", image_url: "http://larkin.com/lacy.fahey", description: "Three egg whites with spinach, mushrooms, caramelized onions, tomatoes and low-fat feta cheese. With herbed quinoa, and your choice of rye or whole-grain toast.", quantity: 3},
+  {name: "Yi Zhen Bai Hao", price: "52.0", image_url: "http://bruen.com/mercedez", description: "Breaded fried chicken with waffles, and a side of maple syrup.", quantity: 4},
+  {name: "Gongmei", price: "24.0", image_url: "http://schoen.com/jewel.okuneva", description: "Smoked salmon, poached eggs, diced red onions and Hollandaise sauce on an English muffin. With a side of roasted potatoes.", quantity: 4},
+  {name: "Kangra", price: "90.0", image_url: "http://toy.net/jerrold", description: "Two buttermilk waffles, topped with whipped cream and maple syrup, a side of two eggs served any style, and your choice of smoked bacon or smoked ham.", quantity: 4},
+  {name: "Gyokuro", price: "94.76", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Gyokuro_img_0067.jpg/1024px-Gyokuro_img_0067.jpg", description: "Since gyokuro is typically steeped at a lower temperature than most other teas, it is common practice to preheat the teaware to ensure a more steady brewing temperature during steeping time and to prolong the warmth of the lower-temperature tea.", quantity: 4}
+])
