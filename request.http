@@ -35,3 +35,14 @@ Content-Type: application/json
 ###
 # delete product
 DELETE http://localhost:3000/products/9
+
+
+### validate?
+Patch http://localhost:3000/products/1
+content-type: application/json
+
+{
+  "price": 100,
+  "image_url": "www.abc.com",
+  "description": "this is a cheap car!!"
+}
