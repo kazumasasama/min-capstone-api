@@ -37,3 +37,18 @@ controller => 複数形
 
 Model => 単数形
   rails g model Product name:string price:integer image_url:string description:text
+
+
+  rails g model Supplier name:string email:string phone_number:string
+
+  supplier = Supplier.new(name: "Tea JPN", email: "jpn-tea@gmail.com", phone_number: 123456789)
+  supplier = Supplier.new(name: "Tea China", email: "chi-tea@gmail.com", phone_number: 123456789)
+  supplier = Supplier.new(name: "Tea India", email: "ind-tea@gmail.com", phone_number: 123456789)
+
+  rails g migration AddSupplierIdToProducts
+
+  rails g model Image url:text product_id:integer
+
+  image = Image.new(url: "https://www.heychina.com.au/wp-content/uploads/2020/04/chinese-teas-chinese-drink.jpg", product_id: 11)
+
+  image = Image.new(url: "https://www.chinalocaltours.com/wp-content/uploads/Top-8-Most-Popular-Chinese-Teas.jpg", product_id: 8)

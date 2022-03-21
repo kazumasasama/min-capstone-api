@@ -1,13 +1,4 @@
 Product.create!([
-  {name: "Shincha", price: "95.25", image_url: nil, description: nil, quantity: nil},
-  {name: "Bai Jiguan", price: "28.49", image_url: nil, description: nil, quantity: nil},
-  {name: "Masala Chai", price: "86.62", image_url: nil, description: nil, quantity: nil},
-  {name: "Bai Mu Dan", price: "38.42", image_url: nil, description: nil, quantity: nil},
-  {name: "Shou Mei", price: "65.48", image_url: nil, description: nil, quantity: nil},
-  {name: "English Breakfast", price: "89.58", image_url: nil, description: nil, quantity: nil},
-  {name: "Gongmei", price: "95.95", image_url: nil, description: nil, quantity: nil},
-  {name: "Shui Xian", price: "92.81", image_url: nil, description: nil, quantity: nil},
-  {name: "Ujeon", price: "64.25", image_url: nil, description: nil, quantity: nil},
   {name: "Hojicha", price: "41.0", image_url: "http://durgan-jacobi.io/venus_larkin", description: "Three egg whites with spinach, mushrooms, caramelized onions, tomatoes and low-fat feta cheese. With herbed quinoa, and your choice of rye or whole-grain toast.", quantity: 1},
   {name: "Jiaogulan", price: "11.0", image_url: "http://morissette.name/boyd_kuphal", description: "Fresh parsley, Italian sausage, shallots, garlic, sun-dried tomatoes and mozzarella cheese in an all-butter crust. With a side of mixed fruits.", quantity: 2},
   {name: "Gaoshan", price: "11.0", image_url: "http://rippin.name/merrilee.dach", description: "Three eggs with cilantro, tomatoes, onions, avocados and melted Emmental cheese. With a side of roasted potatoes, and your choice of toast or croissant.", quantity: 2},

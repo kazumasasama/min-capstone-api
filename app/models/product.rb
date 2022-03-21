@@ -1,7 +1,13 @@
 class Product < ApplicationRecord
-  validates :name, presence: true, uniqueness: true
-  validates :price, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 1,}
-  validates :description, length: {maximum: 500, :minimum: 10}
+  # validates :name, presence: true, uniqueness: true
+  # validates :price, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 1,}
+  # validates :description, length: {maximum: 500, :minimum: 10}
+  has_many :images
+  belongs_to :supplier
+  #  same as above
+  # def supplier
+  #   supplier = Supplier.find(supplier_id)
+  # end
 
   def is_discounted?
     # if price < 10
@@ -20,4 +26,5 @@ class Product < ApplicationRecord
   def total
     price + tax
   end
+
 end

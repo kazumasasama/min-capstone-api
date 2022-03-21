@@ -5,7 +5,7 @@ GET http://localhost:3000/products.json
 
 ###
 # get product (show)
-GET http://localhost:3000/products/16.json
+GET http://localhost:3000/products/12.json
 
 ###
 # create product
@@ -46,3 +46,15 @@ content-type: application/json
   "image_url": "www.abc.com",
   "description": "this is a cheap car!!"
 }
+
+###
+http://localhost:3000/suppliers
+
+###
+http://localhost:3000/suppliers/1
+
+###
+http://localhost:3000/images
+
+###
+http://localhost:3000/images/1
