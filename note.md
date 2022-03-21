@@ -52,3 +52,5 @@ Model => 単数形
   image = Image.new(url: "https://www.heychina.com.au/wp-content/uploads/2020/04/chinese-teas-chinese-drink.jpg", product_id: 11)
 
   image = Image.new(url: "https://www.chinalocaltours.com/wp-content/uploads/Top-8-Most-Popular-Chinese-Teas.jpg", product_id: 8)
+
+  rails g model User name:string password_digest:string password_confirmation:string
