@@ -78,3 +78,9 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+
+###
+### Photos create
+POST http://localhost:3000/sessions
+Authorization: Bearer $2a$12$0at7rlHcRLBqq.HcCzwTfOND5KLC4D8uuRpnyX.SaRhJWbQw8IKIu
+Content-Type: application/json
