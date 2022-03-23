@@ -54,3 +54,7 @@ Model => 単数形
   image = Image.new(url: "https://www.chinalocaltours.com/wp-content/uploads/Top-8-Most-Popular-Chinese-Teas.jpg", product_id: 8)
 
   rails g model User name:string password_digest:string password_confirmation:string
+
+  rails g controller orders
+
+  rails g model Order user_id:integer product_id:integer quantity:integer subtotal:decimal tax:decimal total:decimal

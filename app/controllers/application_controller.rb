@@ -16,7 +16,6 @@ class ApplicationController < ActionController::API
         nil
       end
     end
-    pp current_user
   end
 
   def authenticate_user

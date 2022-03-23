@@ -3,6 +3,7 @@ class Product < ApplicationRecord
   # validates :price, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 1,}
   # validates :description, length: {maximum: 500, :minimum: 10}
   has_many :images
+  has_many :orders
   belongs_to :supplier
   #  same as above
   # def supplier
