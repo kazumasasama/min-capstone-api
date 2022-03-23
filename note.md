@@ -58,3 +58,5 @@ Model => 単数形
   rails g controller orders
 
   rails g model Order user_id:integer product_id:integer quantity:integer subtotal:decimal tax:decimal total:decimal
+
+  rails g migration AddAdminToUser
