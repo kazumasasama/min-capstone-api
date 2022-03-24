@@ -24,4 +24,10 @@ class ApplicationController < ActionController::API
     end
   end
 
+  # def authenticate_admin
+  #   unless user.admin
+  #     render json: {}, status: :unauthorized
+  #   end
+  # end
+
 end

@@ -9,6 +9,11 @@ class Product < ApplicationRecord
   # def supplier
   #   supplier = Supplier.find(supplier_id)
   # end
+  
+  has_many :category_products
+
+  # 登録されているカテゴリーを全て呼び出す
+  has_many :categories, through: :category_products
 
   def is_discounted?
     # if price < 10

@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-
+  # before_action :authenticate_admin, only: %i[create update destroy]
   def index
     @products = Product.all
     render template: "products/index"
@@ -46,9 +46,3 @@ class ProductsController < ApplicationController
   end
 
 end
-
-
-# t.string "name"
-# t.integer "price"
-# t.string "image_url"
-# t.text "description"

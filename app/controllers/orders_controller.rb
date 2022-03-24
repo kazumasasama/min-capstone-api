@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-
+  before_action :authenticate_user, only: %i[index show create]
   def index
     orders = Order.all
     render json: orders.as_json
@@ -7,9 +7,7 @@ class OrdersController < ApplicationController
 
   def show
     order = Order.find(params[:id])
-    if order.user_id == current_user.id
-      render json: order.as_json
-    end
+    render json: order.as_json
   end
 
   def create
