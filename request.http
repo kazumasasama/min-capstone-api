@@ -37,16 +37,6 @@ Content-Type: application/json
 DELETE http://localhost:3000/products/9
 
 
-### validate?
-Patch http://localhost:3000/products/1
-content-type: application/json
-
-{
-  "price": 100,
-  "image_url": "www.abc.com",
-  "description": "this is a cheap car!!"
-}
-
 ###
 http://localhost:3000/suppliers
 
@@ -64,8 +54,8 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "name": "Test name",
-  "email": "test@test.com",
+  "name": "Kaz",
+  "email": "em@il.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -75,7 +65,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "em@il.com",
   "password": "password"
 }
 
@@ -90,8 +80,8 @@ Content-Type: application/json
 }
 
 ### Order - Show
-http://localhost:3000/orders/2.json
-Authorization: Bearer  eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwODAxNzd9.I-HyGTHAVFga4SSA0jWCzArvvCBkt7wWKUl97sn09ec
+http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgzMDI5ODd9.tbq83F0earCLRLPnCr6gpzD1fhj31k9RNsJqwEDfSlw
 Content-Type: application/json
 
 
