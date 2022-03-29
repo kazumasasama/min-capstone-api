@@ -63,3 +63,19 @@ Model => 単数形
 
   rails g model Category name:string
   rails g model CategoryProduct product_id:integer category_id:integer
+
+
+Write out all the steps necessary for your mini-capstone-api to allow users to purchase multiple products with a shopping cart. (aim for roughly 10 to 15 steps)
+Do not write any code for this exercise; just focus on decomposing the different steps necessary to complete the feature.
+
+
+
+user can browse products
+user can add multiple products to their cart
+user can remove products from their cart
+user can purchase all products in their cart
+user can cancel their order
+
+
+
+rails g model carted_products product_id:integer user_id:integer quantity:integer status:string order_id:integer

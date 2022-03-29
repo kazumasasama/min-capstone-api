@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user, only: %i[index show create]
+
   def index
     orders = Order.all
     render json: orders.as_json
@@ -11,22 +12,22 @@ class OrdersController < ApplicationController
   end
 
   def create
-    product = Product.find(params[:product_id])
-    subtotal = product.price * params[:quantity]
+    order = Order.new
+    order.user_id = current_user.id
+
+    subtotal = 0
+    order.carted_products.each do |product|
+      subtotal += (product.product.price * product.quantity)
+    end
+    order.subtotal = subtotal
     tax = subtotal * 0.09
-    total = subtotal + tax
-    order = Order.new(
-      user_id: current_user.id,
-      product_id: params[:product_id],
-      quantity: params[:quantity],
-      subtotal: subtotal,
-      tax: tax,
-      total: total
-    )
+    order.tax = tax
+    order.total = subtotal + tax
+
     if order.save
       render json: order.as_json
     else
-      render json: order.errors.full_messages
+      render json: {errors: order.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
