@@ -12,10 +12,10 @@ class OrdersController < ApplicationController
   end
 
   def create
-    cps = CartedProduct.where(user_id: current_user.id, status: "carted")
+    carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
     subtotal = 0
-    cps.each do |cp|
-      subtotal += cp.product.price * cp.quantity
+    carted_products.each do |carted_product|
+      subtotal += carted_product.product.price * carted_product.quantity
     end
 
 
@@ -27,10 +27,10 @@ class OrdersController < ApplicationController
     )
     order.save
     
-    cps.each do |cp|
-      cp.status = "purchased"
-      cp.order_id = order.id
-      cp.save
+    carted_products.each do |carted_product|
+      carted_product.status = "purchased"
+      carted_product.order_id = order.id
+      carted_product.save
     end
     render json: order.as_json
   end
