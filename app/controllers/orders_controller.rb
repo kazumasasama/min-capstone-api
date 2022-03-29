@@ -12,23 +12,28 @@ class OrdersController < ApplicationController
   end
 
   def create
-    order = Order.new
-    order.user_id = current_user.id
-
+    cps = CartedProduct.where(user_id: current_user.id, status: "carted")
     subtotal = 0
-    order.carted_products.each do |product|
-      subtotal += (product.product.price * product.quantity)
+    cps.each do |cp|
+      subtotal += cp.product.price * cp.quantity
     end
-    order.subtotal = subtotal
-    tax = subtotal * 0.09
-    order.tax = tax
-    order.total = subtotal + tax
 
-    if order.save
-      render json: order.as_json
-    else
-      render json: {errors: order.errors.full_messages}, status: :unprocessable_entity
+
+    order = Order.new(
+      user_id: current_user.id,
+      subtotal: subtotal,
+      tax: subtotal * 0.09,
+      total: subtotal + (subtotal * 0.09)
+    )
+    order.save
+    
+    cps.each do |cp|
+      cp.status = "purchased"
+      cp.order_id = order.id
+      cp.save
     end
+    render json: order.as_json
   end
 
 end
+ 
