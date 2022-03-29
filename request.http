@@ -65,7 +65,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "em@il.com",
+  "email": "test@test.com",
   "password": "password"
 }
 
@@ -110,11 +110,14 @@ Content-Type: application/json
   "status": "carted"
 }
 
-###
+### cp Index
 GET http://localhost:3000/carted_products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2NDQ3OTZ9.kAwwbTUUnHRLqi_0ZGCWBGn0GtGvL0bnSSpMSkpC_90
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDg2NDg2MzZ9.1TfPCo0BDlYhV1JJmqMlOoVhoZ8rcaaS6eYd4hN5pQM
 
-###
+### cp Delete
+DELETE http://localhost:3000/carted_products/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDg2NDg2MzZ9.1TfPCo0BDlYhV1JJmqMlOoVhoZ8rcaaS6eYd4hN5pQM
+
+### orders Create
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2NDQ3OTZ9.kAwwbTUUnHRLqi_0ZGCWBGn0GtGvL0bnSSpMSkpC_90
-Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg2NDQ3OTZ9.kAwwbTUUnHRLqi_0ZGCWBGn0GtGvL0bnSSpMSkpC_90 
