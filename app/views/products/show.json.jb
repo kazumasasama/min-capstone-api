@@ -9,5 +9,6 @@
   is_discounted?: @product.is_discounted?,
   supplier: @product.supplier,
   created_at: @product.created_at,
-  updated_at: @product.updated_at
+  updated_at: @product.updated_at,
+  user_id: @product.user_id
 }

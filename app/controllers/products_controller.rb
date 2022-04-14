@@ -17,7 +17,8 @@ class ProductsController < ApplicationController
       images: params[:images],
       quantity: params[:quantity],
       supplier_id: params[:supplier_id],
-      description: params[:description]
+      description: params[:description],
+      user_id: current_user.id
     )
     if product.save
       render json: {message: "Success"}
