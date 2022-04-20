@@ -12,7 +12,7 @@ class ImagesController < ApplicationController
 
   def create
     image = Image.new(
-      url: params[:url],
+      url: params[:images],
       product_id: params[:product_id],
     )
     if image.save
@@ -24,7 +24,7 @@ class ImagesController < ApplicationController
 
   def update
     image = Image.find(params[:id])
-    image.url = params[:url]
+    image.url = params[:images]
     image.product_id = params[:product_id]
     if image.save
       render json: image.as_json
